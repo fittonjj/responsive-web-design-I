@@ -133,11 +133,17 @@ table {
 html {
   font-size: 62.5%;
 }
-
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: "Bangers", cursive;
+}
 h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-top: 10px;
+  font-family: "Bangers", cursive;
 }
 
 p {
@@ -213,10 +219,6 @@ section.intro .intro-content h1 {
   text-align: center;
 }
 
-section.main .first, section.main .first{
-    flex-wrap:wrap;
-}
-
 section.intro img {
   max-width: 40%;
 }
@@ -235,22 +237,26 @@ section.main .first div {
 
 section.main .last {
   display: flex;
+  border-bottom: 2px solid grey;
 }
 
 section.main {
   margin: 30px 0;
   padding-right: 5px;
 }
+.address {
+  padding: 5px;
+}
 
 footer {
   text-align: center;
+  font-size: 10px;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 800px) {
   body {
     max-width: 96%;
   }
-
   header {
     flex-direction: column-reverse;
     align-content: center;
@@ -261,13 +267,11 @@ footer {
     width: 30%;
     margin: 15px 0;
   }
-
-  section.intro img {
-    display: none;
-  }
-
   section.intro .intro-content {
     margin: auto;
+  }
+  section.intro img {
+    display: none;
   }
 }
 
@@ -282,16 +286,21 @@ footer {
     text-align: center;
   }
 
-  header nav a:first {
-    border-top: 2px solid grey;
+  header nav a.first-link {
+    border-top: 2px solid gray;
   }
 
   header nav a {
-    border-top: 2px solid grey;
+    border-bottom: 2px solid gray;
     padding: 15px;
   }
 
   section.intro .intro-content {
     width: 100%;
+  }
+
+  section.main .first,
+  section.main .last {
+    flex-wrap: wrap;
   }
 }
